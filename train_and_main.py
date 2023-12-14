@@ -12,17 +12,20 @@ from itertools import product
 from flask import Flask, jsonify, request
 from itertools import combinations
 #máy vnpt
-model_file_path = 'C:\\Users\\nhona\\OneDrive\\Máy tính\\Nam\\Project_Graduate_AI_Chat\\trained_model.joblib'
-excel_file_path = 'C:\\Users\\nhona\\OneDrive\\Máy tính\\Nam\\Project_Graduate_AI_Chat\\Data.xlsx'
-file_path_vectors_vector_train_export = 'C:\\Users\\nhona\\OneDrive\\Máy tính\\Nam\\Project_Graduate_AI_Chat\\vector_train_export.xlsx'
-all_keywords_json_path ='C:\\Users\\nhona\\OneDrive\\Máy tính\\Nam\\Project_Graduate_AI_Chat\\all_keywords.json'
-labels_json_path ='C:\\Users\\nhona\\OneDrive\\Máy tính\\Nam\\Project_Graduate_AI_Chat\\labels.json'
+# model_file_path = 'C:\\Users\\nhona\\OneDrive\\Máy tính\\Nam\\Project_Graduate_AI_Chat\\trained_model.joblib'
+# excel_file_path = 'C:\\Users\\nhona\\OneDrive\\Máy tính\\Nam\\Project_Graduate_AI_Chat\\Data.xlsx'
+# file_path_vectors_vector_train_export = 'C:\\Users\\nhona\\OneDrive\\Máy tính\\Nam\\Project_Graduate_AI_Chat\\vector_train_export.xlsx'
+# all_keywords_json_path ='C:\\Users\\nhona\\OneDrive\\Máy tính\\Nam\\Project_Graduate_AI_Chat\\all_keywords.json'
+# labels_json_path ='C:\\Users\\nhona\\OneDrive\\Máy tính\\Nam\\Project_Graduate_AI_Chat\\labels.json'
 #---------------
-#máy cá nhân
-# model_file_path = 'D:\\DoAnTotNghiep\\AI_Main\\Project_Graduate_AI_Chat\\trained_model.joblib'
-# excel_file_path = 'D:\\DoAnTotNghiep\\AI_Main\\Project_Graduate_AI_Chat\\Data.xlsx'
-# file_path_vectors_keywords = 'D:\\DoAnTotNghiep\\AI_Main\\Project_Graduate_AI_Chat\\vector_train_export.xlsx'
 
+
+#máy cá nhân
+model_file_path = 'D:\\DoAnTotNghiep\\AI_Main\\Project_Graduate_AI_Chat\\trained_model.joblib'
+excel_file_path = 'D:\\DoAnTotNghiep\\AI_Main\\Project_Graduate_AI_Chat\\Data.xlsx'
+file_path_vectors_vector_train_export = 'D:\\DoAnTotNghiep\\AI_Main\\Project_Graduate_AI_Chat\\vector_train_export.xlsx'
+all_keywords_json_path ='D:\\DoAnTotNghiep\\AI_Main\\Project_Graduate_AI_Chat\\all_keywords.json'
+labels_json_path ='D:\\DoAnTotNghiep\\AI_Main\\Project_Graduate_AI_Chat\\labels.json'
 
 
 def train_knn_model(vectors):
@@ -94,11 +97,6 @@ def load_and_process_data():
     result_df.to_excel(file_path_vectors_vector_train_export, index=False)
 
     return keyword_dictionary, all_keywords
-
-
-  
-
-  
 
 # Create a DataFrame
   
@@ -211,7 +209,7 @@ def add_numbers():
         
 if __name__ == "__main__":
 
-    #tranning
+    # tranning
     # load_and_process_data()
     # df = train_and_save_model()
     #-----------
